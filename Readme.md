@@ -20,11 +20,6 @@ C:\> SharpByPassUAC.exe --binary C:\\Windows\\System32\\msdt.exe --dll  C:\\User
 SharpByPassUAC 1.0.0
 Copyright (C) 2021 SharpByPassUAC
 
-ERROR(S):
-  Option 'h' is unknown.
-  Required option 'dll' is missing.
-  Required option 'binary' is missing.
-
   --dll        Required. Input dll file to be processed.
 
   --binary     Required. Binary file to execute in order to trigger the UAC bypass.

